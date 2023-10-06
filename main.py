@@ -47,11 +47,11 @@ def play(first_time: bool):
 
   wantsToPlayAgain = str(input("Quer jogar novamente? [S/n] "))
 
-  match wantsToPlayAgain:
-    case "SIM" | "sim" | "S" | "s":
+  match wantsToPlayAgain[0].upper():
+    case "S":
       play(False)
     
-    case "NAO" | "Nao" | "nao" | "NÃO" | "Não" | "não" | "N" | "n":
+    case "N":
       return
     
     case _:
